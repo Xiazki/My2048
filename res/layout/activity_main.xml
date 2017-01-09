@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/score_" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.example.my2048.GameView
+            android:id="@+id/gameview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.example.my2048.GameView>
+
+        <com.example.my2048.Animlayer
+            android:id="@+id/animview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.example.my2048.Animlayer>
+    </FrameLayout>
+
+</LinearLayout>
